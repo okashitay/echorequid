@@ -1,0 +1,441 @@
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = ;
+	document.CALLGRAPH = ;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "."</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+				<dd><a href="#pkg-variables">Variables</a></dd>
+			
+			
+				
+				<dd><a href="#AppendRequestUUID">func AppendRequestUUID() echo.MiddlewareFunc</a></dd>
+			
+				
+				<dd><a href="#AppendRequestUUIDWithBuilder">func AppendRequestUUIDWithBuilder(builder RequestUUIDBuilder) echo.MiddlewareFunc</a></dd>
+			
+				
+				<dd><a href="#AppendRequestUUIDWithConfig">func AppendRequestUUIDWithConfig(config *AppendRequestUUIDConfig) echo.MiddlewareFunc</a></dd>
+			
+				
+				<dd><a href="#AppendRequestUUIDWithConfigAndBuilder">func AppendRequestUUIDWithConfigAndBuilder(config *AppendRequestUUIDConfig, builder RequestUUIDBuilder) echo.MiddlewareFunc</a></dd>
+			
+				
+				<dd><a href="#BuildString">func BuildString(strs ...string) string</a></dd>
+			
+				
+				<dd><a href="#CalcRemoteAddr">func CalcRemoteAddr(req engine.Request) string</a></dd>
+			
+			
+				
+				<dd><a href="#AppendRequestUUIDConfig">type AppendRequestUUIDConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="#DefaultBuilder">type DefaultBuilder</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DefaultBuilder.Build">func (d DefaultBuilder) Build(c echo.Context) (string, error)</a></dd>
+				
+			
+				
+				<dd><a href="#RequestUUIDBuilder">type RequestUUIDBuilder</a></dd>
+				
+				
+			
+				
+				<dd><a href="#Strategy">type Strategy</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="/src/target/appender.go">appender.go</a>
+			
+				<a href="/src/target/builder.go">builder.go</a>
+			
+				<a href="/src/target/defaultbuilder.go">defaultbuilder.go</a>
+			
+				<a href="/src/target/util.go">util.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				<pre>var <span id="DefaultAppendRequestUUIDConfig">DefaultAppendRequestUUIDConfig</span> = &amp;<a href="#AppendRequestUUIDConfig">AppendRequestUUIDConfig</a>{
+    <a href="#HeaderFieldName">HeaderFieldName</a>:   &#34;X-Request-Id&#34;,
+    <a href="#DuplicateStrategy">DuplicateStrategy</a>: <a href="#OVERWRITE">OVERWRITE</a>,
+}</pre>
+				
+			
+		
+		
+			
+			
+			<h2 id="AppendRequestUUID">func <a href="/src/target/appender.go?s=528:572#L18">AppendRequestUUID</a>
+				<a class="permalink" href="#AppendRequestUUID">&#xb6;</a>
+			</h2>
+			<pre>func AppendRequestUUID() <a href="/pkg/github.com/labstack/echo/">echo</a>.<a href="/pkg/github.com/labstack/echo/#MiddlewareFunc">MiddlewareFunc</a></pre>
+			<p>
+func AppendRequestUUID() echo.MiddlewareFunc
+Generate Middleware func for echo
+Using DefaultConfiguration and  DefaultBUilder
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="AppendRequestUUIDWithBuilder">func <a href="/src/target/appender.go?s=848:929#L25">AppendRequestUUIDWithBuilder</a>
+				<a class="permalink" href="#AppendRequestUUIDWithBuilder">&#xb6;</a>
+			</h2>
+			<pre>func AppendRequestUUIDWithBuilder(builder <a href="#RequestUUIDBuilder">RequestUUIDBuilder</a>) <a href="/pkg/github.com/labstack/echo/">echo</a>.<a href="/pkg/github.com/labstack/echo/#MiddlewareFunc">MiddlewareFunc</a></pre>
+			<p>
+func AppendRequestUUIDWithBuilder(builder RequestUUIDBuilder) echo.MiddlewareFunc
+Generate Middleware func for echo
+With builder implementation Using Default Config
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="AppendRequestUUIDWithConfig">func <a href="/src/target/appender.go?s=1102:1187#L31">AppendRequestUUIDWithConfig</a>
+				<a class="permalink" href="#AppendRequestUUIDWithConfig">&#xb6;</a>
+			</h2>
+			<pre>func AppendRequestUUIDWithConfig(config *<a href="#AppendRequestUUIDConfig">AppendRequestUUIDConfig</a>) <a href="/pkg/github.com/labstack/echo/">echo</a>.<a href="/pkg/github.com/labstack/echo/#MiddlewareFunc">MiddlewareFunc</a></pre>
+			<p>
+Generate Middleware func for echo
+With configuration Using DefaultBUilder
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="AppendRequestUUIDWithConfigAndBuilder">func <a href="/src/target/appender.go?s=1535:1658#L39">AppendRequestUUIDWithConfigAndBuilder</a>
+				<a class="permalink" href="#AppendRequestUUIDWithConfigAndBuilder">&#xb6;</a>
+			</h2>
+			<pre>func AppendRequestUUIDWithConfigAndBuilder(config *<a href="#AppendRequestUUIDConfig">AppendRequestUUIDConfig</a>, builder <a href="#RequestUUIDBuilder">RequestUUIDBuilder</a>) <a href="/pkg/github.com/labstack/echo/">echo</a>.<a href="/pkg/github.com/labstack/echo/#MiddlewareFunc">MiddlewareFunc</a></pre>
+			<p>
+func AppendRequestUUIDWithConfigAndBuilder(config *AppendRequestUUIDConfig, builder RequestUUIDBuilder) echo.MiddlewareFunc
+Generate Middleware func for echo
+Setting calcurated RequesUUID to HTTP Request Header,
+With configuration and builder implementation
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="BuildString">func <a href="/src/target/util.go?s=552:591#L17">BuildString</a>
+				<a class="permalink" href="#BuildString">&#xb6;</a>
+			</h2>
+			<pre>func BuildString(strs ...<a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+			<p>
+func BuildString(strs ...string) string
+concat all strings
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="CalcRemoteAddr">func <a href="/src/target/util.go?s=198:244#L2">CalcRemoteAddr</a>
+				<a class="permalink" href="#CalcRemoteAddr">&#xb6;</a>
+			</h2>
+			<pre>func CalcRemoteAddr(req <a href="/pkg/github.com/labstack/echo/engine/">engine</a>.<a href="/pkg/github.com/labstack/echo/engine/#Request">Request</a>) <a href="/pkg/builtin/#string">string</a></pre>
+			<p>
+func CalcRemoteAddr(req engine.Request) string
+calcurate remote address from request
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="AppendRequestUUIDConfig">type <a href="/src/target/appender.go?s=165:258#L5">AppendRequestUUIDConfig</a>
+				<a class="permalink" href="#AppendRequestUUIDConfig">&#xb6;</a>
+			</h2>
+			<pre>type AppendRequestUUIDConfig struct {
+    HeaderFieldName   <a href="/pkg/builtin/#string">string</a>
+    DuplicateStrategy <a href="#Strategy">Strategy</a>
+}</pre>
+			<p>
+type AppendRequestUUIDConfig struct
+</p>
+
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="DefaultBuilder">type <a href="/src/target/defaultbuilder.go?s=110:138#L1">DefaultBuilder</a>
+				<a class="permalink" href="#DefaultBuilder">&#xb6;</a>
+			</h2>
+			<pre>type DefaultBuilder struct{}</pre>
+			<p>
+DefaultBuilder struct
+</p>
+
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DefaultBuilder.Build">func (DefaultBuilder) <a href="/src/target/defaultbuilder.go?s=252:313#L5">Build</a>
+					<a class="permalink" href="#DefaultBuilder.Build">&#xb6;</a>
+				</h3>
+				<pre>func (d <a href="#DefaultBuilder">DefaultBuilder</a>) Build(c <a href="/pkg/github.com/labstack/echo/">echo</a>.<a href="/pkg/github.com/labstack/echo/#Context">Context</a>) (<a href="/pkg/builtin/#string">string</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+				<p>
+func (d DefaultBuilder) Build(c echo.Context) (string, error)
+Build UUID using remoteaddr, and time.Now()
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="RequestUUIDBuilder">type <a href="/src/target/builder.go?s=83:159#L1">RequestUUIDBuilder</a>
+				<a class="permalink" href="#RequestUUIDBuilder">&#xb6;</a>
+			</h2>
+			<pre>type RequestUUIDBuilder interface {
+    Build(c <a href="/pkg/github.com/labstack/echo/">echo</a>.<a href="/pkg/github.com/labstack/echo/#Context">Context</a>) (<a href="/pkg/builtin/#string">string</a>, <a href="/pkg/builtin/#error">error</a>)
+}</pre>
+			<p>
+RequestUUIDBuilder interface
+</p>
+
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Strategy">type <a href="/src/target/appender.go?s=56:73#L1">Strategy</a>
+				<a class="permalink" href="#Strategy">&#xb6;</a>
+			</h2>
+			<pre>type Strategy <a href="/pkg/builtin/#int">int</a></pre>
+			
+
+			
+				<pre>const (
+    <span id="OVERWRITE">OVERWRITE</span> <a href="#Strategy">Strategy</a> = <a href="/pkg/builtin/#iota">iota</a>
+    <span id="PASSTHROUGH">PASSTHROUGH</span>
+)</pre>
+				
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	
+
+
+	<div class="pkg-dir">
+		<table>
+			<tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="..">..</a></td>
+			</tr>
+			
+
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="doc/">doc</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="mock/">mock</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+		</table>
+	</div>
+
+
+	
+

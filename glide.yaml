@@ -1,0 +1,7 @@
+package: echorequid
+import:
+- package: github.com/labstack/echo
+  subpackages:
+  - engine
+- package: github.com/smartystreets/goconvey
+- package: github.com/golang/mock/gomock
